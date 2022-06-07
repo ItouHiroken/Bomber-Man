@@ -17,8 +17,8 @@ GameObject:
   - component: {fileID: -166871728139388618}
   - component: {fileID: 8021087256350953266}
   m_Layer: 0
-  m_Name: "\u7206\u5F3E"
-  m_TagString: Untagged
+  m_Name: BombPrefab
+  m_TagString: Bomb
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31,7 +31,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1135012796401298066}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.92, y: -6.26, z: 1.4942384}
+  m_LocalPosition: {x: 0.55, y: -0.06, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -104,9 +104,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _targetTime: 3
   _currentTime: 0
-  _bombLange: 0
-  _collide: {fileID: -5407148464281534200}
+  _bombHp: 1
   _circleCollider: {fileID: 5607018177761344729}
+  _bombRange: 9
+  _collide: {fileID: -5407148464281534200}
+  explosionPrefab: {fileID: 2138906100856040723, guid: 01cba5963920b4b4db6dead9f1944e9b, type: 3}
+  levelMask:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!61 &-5407148464281534200
 BoxCollider2D:
   m_ObjectHideFlags: 0
