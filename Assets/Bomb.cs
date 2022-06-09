@@ -5,18 +5,23 @@ using UnityEngine.Events;
 
 public class Bomb : MonoBehaviour
 {
-    [SerializeField] private float _targetTime = default;
-    [SerializeField] private float _currentTime = default;
-    [SerializeField] float _bombHp = default;
-    [SerializeField] private CircleCollider2D _circleCollider = default;
-    [SerializeField] public float _bombRange = default;
-    [SerializeField] public Collider2D _collide = default;
+    [SerializeField][Tooltip("爆発時間を0秒に戻す用のやつ")] private float _targetTime = default;
+    [SerializeField][Tooltip("爆発する時間")] private float _currentTime = default;
+    [SerializeField][Tooltip("爆弾のHP")] float _bombHp = default;
+    [SerializeField][Tooltip("isTriggerのチェックがついてないやーつ")] private CircleCollider2D _circleCollider = default;
+    [SerializeField][Tooltip("isTriggerのチェックがついてるやーつ")] public Collider2D _collide = default;
+    [SerializeField][Tooltip("爆弾の爆発範囲")] public float _bombRange = default;
+    
 
-    [SerializeField] public GameObject explosionPrefab;
-    [SerializeField] public LayerMask levelMask;
+    [SerializeField][Tooltip("爆発のエフェクトを持ってくるよ！")] public GameObject explosionPrefab;
+    [SerializeField][Tooltip("違うレイヤーで当たり判定とるよ！")] public LayerMask levelMask;
+    [Tooltip("これはオーディオソース")]private AudioSource booooooo;
+    [Tooltip("爆弾のアニメーションを持ってくるよ！")]public AudioClip audioClip;
 
     public void Start()
     {
+        booooooo = gameObject.GetComponent<AudioSource>();
+
         _collide = GetComponent<Collider2D>();
         _collide.enabled = true;
     }
@@ -33,6 +38,9 @@ public class Bomb : MonoBehaviour
             StartCoroutine(CreateExplosions(Vector3.right)); // 右に広げる
             StartCoroutine(CreateExplosions(Vector3.down)); // 下に広げる
             StartCoroutine(CreateExplosions(Vector3.left)); // 左に広げる
+
+            booooooo.PlayOneShot(audioClip);
+
             //爆弾を非表示にする
             //GetComponent<MeshRenderer>().enabled = false;
             //transform.Find("Collider").gameObject.SetActive(false);
@@ -61,6 +69,10 @@ public class Bomb : MonoBehaviour
         }
     }
 
+    //public void wa()
+    //{
+        
+    //}
     // 爆風を広げる
     private IEnumerator CreateExplosions(Vector3 direction)
     {

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BombBlast : MonoBehaviour
 {
-    public int _bombDamage;
+    [Tooltip("爆弾にダメージを付与！")] public int _bombDamage;
     void Update()
     {
         Destroy(this.gameObject, 0.5f);
