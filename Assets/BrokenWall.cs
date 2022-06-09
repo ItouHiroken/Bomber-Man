@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BrokenWall : MonoBehaviour
 {
-    [SerializeField] float _wallHp = default;
+    [SerializeField][Tooltip("�ǂ̗̑́I")] float _wallHp = default;
 
     void OnTriggerEnter2D(Collider2D collision)
     {

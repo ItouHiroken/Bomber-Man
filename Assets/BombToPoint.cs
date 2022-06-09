@@ -8,11 +8,11 @@ public class BombToPoint : MonoBehaviour
     private float _searchTime = 0;    //経過時間
 
     // Use this for initialization
-    void Start()
-    {
-        //最も近かったオブジェクトを取得
-       // nearObj = SerchTag(gameObject, "Point");
-    }
+    //void Start()
+    //{
+    //    //最も近かったオブジェクトを取得
+    //   // nearObj = SerchTag(gameObject, "Point");
+    //}
 
     // Update is called once per frame
     void Update()
