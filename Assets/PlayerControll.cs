@@ -1,19 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class PlayerControll : MonoBehaviour
 {
     [SerializeField][Tooltip("移動速度")] float _speed = 10.0f;
     [SerializeField][Tooltip("ボムが行ってほしい場所サーチ用")] private BombToPoint _bombToPoint;
     [SerializeField][Tooltip("プレイヤーの体力")] float _playerHp = default;
+
+    public GameObject Result;
     private Animator _anim;
 
     public GameObject BombPrefab;
-
     private void Start()
     {
         _anim = GetComponent<Animator>();
+        Result.SetActive(false);
     }
     void Update()
     {
@@ -27,7 +31,7 @@ public class PlayerControll : MonoBehaviour
         Mathf.Round(bombx);
         Mathf.Round(bomby);
 
-        if (Input.GetKeyDown(KeyCode.LeftShift))//死んだとき受けつけなくしたい！
+        if (Input.GetKeyDown(KeyCode.Space))//死んだとき受けつけなくしたい！
         {
             GameObject ins = _bombToPoint.SerchTag(this.gameObject, "Point");
             Instantiate(BombPrefab, ins.transform.position, ins.transform.rotation);
@@ -64,22 +68,22 @@ public class PlayerControll : MonoBehaviour
             //    //_anim.SetFloat("walkfloat", Input.GetAxisRaw("Vertical"));
             //    //_anim.SetFloat("horizonfloat", Input.GetAxisRaw("Horizontal"));
             //}
-           
+
         }
     }
     void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.TryGetComponent(out BombBlast bomb))
+        {
+            _playerHp -= bomb._bombDamage;
+            if (_playerHp <= 0)
             {
-                if (collision.gameObject.TryGetComponent(out BombBlast bomb))
-                {
-                    _playerHp -= bomb._bombDamage;
-                    if (_playerHp <= 0)
-                    {
-                        _anim.SetBool("alive", false);
-                        Destroy(gameObject,1.15f);
-
-                    }
-                }
+                _anim.SetBool("alive", false);
+                Destroy(gameObject, 1.15f);
+                Result.SetActive(true);
             }
+        }
+    }
 }
 
 
