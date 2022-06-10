@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player2Controll : MonoBehaviour
 {
@@ -8,12 +9,16 @@ public class Player2Controll : MonoBehaviour
     [SerializeField][Tooltip("ボムが行ってほしい場所サーチ用")] private BombToPoint _bombToPoint;
     [SerializeField][Tooltip("プレイヤーの体力")] float _playerHp = default;
     private Animator _anim;
-
+    //bool _isPlaying = false;
     public GameObject BombPrefab;
+    public GameObject Result;
+
 
     private void Start()
     {
         _anim = GetComponent<Animator>();
+        Result.SetActive(false);
+
     }
     void Update()
     {
@@ -27,8 +32,12 @@ public class Player2Controll : MonoBehaviour
         Mathf.Round(bombx);
         Mathf.Round(bomby);
 
+        //if (Input.GetKeyDown(KeyCode.KeypadEnter)||Input.GetKeyDown(KeyCode.Space)) 
+        //    {
+        //    _isPlaying = true;
+        //    }
 
-        if (Input.GetKeyDown(KeyCode.RightShift))
+            if (Input.GetKeyDown(KeyCode.Return))
         {
             GameObject ins = _bombToPoint.SerchTag(this.gameObject, "Point");
             Instantiate(BombPrefab, ins.transform.position, ins.transform.rotation);
@@ -76,6 +85,7 @@ public class Player2Controll : MonoBehaviour
             if (_playerHp <= 0)
             {
                 _anim.SetBool("alive", false);
+                Result.SetActive(true);
                 Destroy(gameObject, 1.15f);
 
             }

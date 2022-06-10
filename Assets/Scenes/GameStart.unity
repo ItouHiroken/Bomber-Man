@@ -1072,6 +1072,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2957460837911173112, guid: c012fb272f6e22a43bd365b6351f8716, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2957460837911173112, guid: c012fb272f6e22a43bd365b6351f8716, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5283019
+      objectReference: {fileID: 0}
+    - target: {fileID: 2957460837911173112, guid: c012fb272f6e22a43bd365b6351f8716, type: 3}
+      propertyPath: m_Color.g
+      value: 0.5283019
+      objectReference: {fileID: 0}
+    - target: {fileID: 2957460837911173112, guid: c012fb272f6e22a43bd365b6351f8716, type: 3}
+      propertyPath: m_Color.r
+      value: 0.5283019
+      objectReference: {fileID: 0}
     - target: {fileID: 2957460837911173113, guid: c012fb272f6e22a43bd365b6351f8716, type: 3}
       propertyPath: m_Name
       value: runningman
