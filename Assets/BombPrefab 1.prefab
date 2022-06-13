@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 8021087256350953266}
   - component: {fileID: -3807388156807254091}
   m_Layer: 0
-  m_Name: BombPrefab
+  m_Name: BombPrefab 1
   m_TagString: Bomb
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -107,13 +107,14 @@ MonoBehaviour:
   _currentTime: 0
   _bombHp: 1
   _circleCollider: {fileID: 5607018177761344729}
-  _bombRange: 9
   _collide: {fileID: -5407148464281534200}
+  _bombRange: 9
   explosionPrefab: {fileID: 2138906100856040723, guid: 01cba5963920b4b4db6dead9f1944e9b, type: 3}
   levelMask:
     serializedVersion: 2
     m_Bits: 64
   audioClip: {fileID: 8300000, guid: c7e572b255e311b479005985ed7f4ba2, type: 3}
+  PlayerController: {fileID: 0}
 --- !u!61 &-5407148464281534200
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -9,7 +9,8 @@ public class PlayerControll : MonoBehaviour
     [SerializeField][Tooltip("移動速度")] float _speed = 10.0f;
     [SerializeField][Tooltip("ボムが行ってほしい場所サーチ用")] private BombToPoint _bombToPoint;
     [SerializeField][Tooltip("プレイヤーの体力")] float _playerHp = default;
-
+    [SerializeField][Tooltip("自分のonoffするため")] PlayerControll controller1;
+    public int _countBomb =4 ; 
     public GameObject Result;
     private Animator _anim;
 
@@ -31,12 +32,15 @@ public class PlayerControll : MonoBehaviour
         Mathf.Round(bombx);
         Mathf.Round(bomby);
 
-        if (Input.GetKeyDown(KeyCode.Space))//死んだとき受けつけなくしたい！
+        if (_countBomb >= 1)
+        {
+            if (Input.GetKeyDown(KeyCode.Space))//死んだとき受けつけなくしたい！
         {
             GameObject ins = _bombToPoint.SerchTag(this.gameObject, "Point");
             Instantiate(BombPrefab, ins.transform.position, ins.transform.rotation);
+            _countBomb -= 1;
         }
-
+        }
 
         if (Input.GetKeyDown(KeyCode.W))
         {
@@ -79,6 +83,7 @@ public class PlayerControll : MonoBehaviour
             if (_playerHp <= 0)
             {
                 _anim.SetBool("alive", false);
+                controller1.enabled = false;
                 Destroy(gameObject, 1.15f);
                 Result.SetActive(true);
             }
