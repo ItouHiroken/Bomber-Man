@@ -7,10 +7,10 @@ public class GameManager : MonoBehaviour
 {
     //public GameObject point;//置いたpoint
     //private GameObject[,] newObj = new GameObject[squareY, squareX];//置いたpointの座標
-    [SerializeField] [Tooltip("")]GameObject runningObj = GameObject.Find("runningman");
-   // [SerializeField] GameObject runningObj2 = GameObject.Find("runningman2");
-    [SerializeField] GameObject player1Obj = GameObject.Find("Player");
-    [SerializeField] GameObject player2Obj = GameObject.Find("Player2");
+    [SerializeField][Tooltip("ゲーム開始画面のとことこまんたち")] GameObject runningObj;
+    // [SerializeField] GameObject runningObj2 = GameObject.Find("runningman2");
+    [SerializeField] GameObject player1Obj;
+    [SerializeField] GameObject player2Obj;
 
     [SerializeField] GameObject runningmanPrefab;
 
@@ -29,8 +29,6 @@ public class GameManager : MonoBehaviour
                 //GameObject newObj = Instantiate(Point);
                 Instantiate(pointPrefab);
                 pointPrefab.transform.position = new Vector2(j + _pointX, i + _pointY);
-
-
             }
         }
     }
@@ -44,7 +42,6 @@ public class GameManager : MonoBehaviour
         }
         if(player1Obj==null || player2Obj==null)
         {
-            Debug.Log("kirikae");
             SceneManager.LoadScene("GameStart");
         }
     }

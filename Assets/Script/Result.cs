@@ -11,7 +11,7 @@ public class Result : MonoBehaviour
     [SerializeField][Tooltip("何秒後にスタートシーンに戻るかマン")] float _i = default;
     private void Update()
     {
-        if (Input.anyKeyDown)
+        if (Input.GetKeyDown(KeyCode.R))
         {
             SceneManager.LoadScene("GameScene");
         }
