@@ -10,9 +10,6 @@ public class BombPlayer2 : MonoBehaviour
     [SerializeField][Tooltip("爆弾のHP")] int _bombHp = default;
     [SerializeField][Tooltip("isTriggerのチェックがついてないやーつ")] private CircleCollider2D _circleCollider = default;
     [Tooltip("isTriggerのチェックがついてるやーつ")] public Collider2D _collide = default;
-    [Tooltip("爆弾の爆発範囲")] public float _bombRange = default;
-
-
     [Tooltip("爆発のエフェクトを持ってくるよ！")] public GameObject explosionPrefab;
     [Tooltip("違うレイヤーで当たり判定とるよ！")] public LayerMask levelMask;
     [Tooltip("これはオーディオソース")] private AudioSource booooooo;
@@ -65,8 +62,11 @@ public class BombPlayer2 : MonoBehaviour
     }
     private IEnumerator CreateExplosions(Vector3 direction)
     {
+        PlayerControll playerscript; //呼ぶスクリプトにあだなつける
+        GameObject obj = GameObject.Find("Player2"); //Playerっていうオブジェクトを探す
+        playerscript = obj.GetComponent<PlayerControll>();　//付いているスクリプトを取得
         // 2 マス分ループする
-        for (int i = 1; i < _bombRange; i++)
+        for (int i = 1; i < playerscript._bombRange; i++)
         {
             // ブロックとの当たり判定の結果を格納する変数
             RaycastHit2D hit = Physics2D.Raycast(transform.position + new Vector3(0, 0.5f, 0) + direction * (i - 1), direction, 1, levelMask);

@@ -6,11 +6,14 @@ using UnityEngine.UI;
 
 public class Player2Controll : MonoBehaviour
 {
-    [SerializeField][Tooltip("移動速度")] float _speed = 10.0f;
+    
     [SerializeField][Tooltip("ボムが行ってほしい場所サーチ用")] private BombToPoint _bombToPoint;
     [SerializeField][Tooltip("プレイヤーの体力")] float _playerHp = default;
     [SerializeField][Tooltip("自分のonoffするため")] Player2Controll controller2;
-    public int _countBomb = 4;
+    [Tooltip("ボムの最大数カウント")] public int _countBomb = 1;
+    [Tooltip("移動速度")] public float _speed = 10.0f;
+    [Tooltip("爆弾の爆発範囲")] public float _bombRange = default;
+
     public GameObject Result;
     private Animator _anim;
 
