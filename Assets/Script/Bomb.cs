@@ -15,6 +15,7 @@ public class Bomb : MonoBehaviour
     [Tooltip("違うレイヤーで当たり判定とるよ！")] public LayerMask levelMask;
     [Tooltip("これはオーディオソース")]private AudioSource booooooo;
     [Tooltip("爆弾のアニメーションを持ってくるよ！")]public AudioClip audioClip;
+    PlayerControll playerscript; //呼ぶスクリプトにあだなつける
 
     [Tooltip("これはボムからプレイヤーまで正常に動かすためにいるやつ")]private bool _bombed ;
     
@@ -28,7 +29,8 @@ public class Bomb : MonoBehaviour
         _collide = GetComponent<Collider2D>();
         _collide.enabled = true;
 
-     
+        GameObject obj = GameObject.Find("Player"); //Playerっていうオブジェクトを探す
+        playerscript = obj.GetComponent<PlayerControll>();　//付いているスクリプトを取得
 
     }
     void Update()
@@ -70,9 +72,7 @@ public class Bomb : MonoBehaviour
     }
     private IEnumerator CreateExplosions(Vector3 direction)
     {
-        PlayerControll playerscript; //呼ぶスクリプトにあだなつける
-        GameObject obj = GameObject.Find("Player"); //Playerっていうオブジェクトを探す
-        playerscript = obj.GetComponent<PlayerControll>();　//付いているスクリプトを取得
+       
 
         // 2 マス分ループする
         for (int i = 1; i < playerscript._bombRange; i++)

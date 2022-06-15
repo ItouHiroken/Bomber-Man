@@ -8,9 +8,6 @@ public class BrokenWall : MonoBehaviour
     [SerializeField] private GameObject[] itemPrefab;
     //float posx = transform.position.x;
 
-    private void Start()
-    {
-    }
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.TryGetComponent(out BombBlast bomb))
@@ -20,7 +17,6 @@ public class BrokenWall : MonoBehaviour
             { 
                 SpawnRandomItem();
                 Destroy(gameObject);
-                Debug.Log("aa");
             }
         }
     }
