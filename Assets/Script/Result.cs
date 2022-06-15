@@ -16,6 +16,7 @@ public class Result : MonoBehaviour
             SceneManager.LoadScene("GameScene");
         }
         _s += Time.deltaTime;
+       
         if (_i <= _s)
         {
             SceneManager.LoadScene("GameStart");
