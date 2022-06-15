@@ -22,5 +22,6 @@ public class Escape : MonoBehaviour
         public void StartScene()
         {
             SceneManager.LoadScene("GameStart");
+       
         }
 }

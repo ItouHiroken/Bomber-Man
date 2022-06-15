@@ -39,11 +39,17 @@ public class PlayerControll : MonoBehaviour
         if (_countBomb >= 1)
         {
             if (Input.GetKeyDown(KeyCode.Space))//死んだとき受けつけなくしたい！
-        {
-            GameObject ins = _bombToPoint.SerchTag(this.gameObject, "Point");
-            Instantiate(BombPrefab, ins.transform.position, ins.transform.rotation);
-            _countBomb -= 1;
-        }
+            {
+                GameObject ins = _bombToPoint.SerchTag(this.gameObject, "Point");
+                Point pointscript; //呼ぶスクリプトにあだなつける
+                pointscript = ins.GetComponent<Point>();　//付いているスクリプトを取得
+                if(pointscript.inBomb==true)
+                {
+                    Instantiate(BombPrefab, ins.transform.position, ins.transform.rotation);
+                    _countBomb -= 1;
+                    pointscript.inBomb = false;
+                }
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.W))
@@ -71,12 +77,6 @@ public class PlayerControll : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
         {
             _anim.SetFloat("horizonfloat", 0);
-
-
-            //    //_anim.SetFloat("walkfloat", Input.GetAxisRaw("Vertical"));
-            //    //_anim.SetFloat("horizonfloat", Input.GetAxisRaw("Horizontal"));
-            //}
-
         }
     }
     void OnTriggerEnter2D(Collider2D collision)

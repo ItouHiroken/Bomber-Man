@@ -12,7 +12,7 @@ public class Player2Controll : MonoBehaviour
     [SerializeField][Tooltip("自分のonoffするため")] Player2Controll controller2;
     [Tooltip("ボムの最大数カウント")] public int _countBomb = 1;
     [Tooltip("移動速度")] public float _speed = 10.0f;
-    [Tooltip("爆弾の爆発範囲")] public float _bombRange = default;
+    [Tooltip("爆弾の爆発範囲")] public int _bombRange = default;
 
     public GameObject Result;
     private Animator _anim;
@@ -28,7 +28,7 @@ public class Player2Controll : MonoBehaviour
         float verticalInput = _speed * Input.GetAxisRaw("Player2 Vertical");
         float horizontalInput = _speed * Input.GetAxisRaw("Player2 Horizontal");
         GetComponent<Rigidbody2D>().velocity = new Vector2(horizontalInput, verticalInput);
-        Vector2 _playerPosition = GameObject.Find("Player").transform.position;
+        Vector2 _playerPosition = GameObject.Find("Player2").transform.position;
 
         float bombx = _playerPosition.x;
         float bomby = _playerPosition.y;
@@ -40,8 +40,14 @@ public class Player2Controll : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Return))//死んだとき受けつけなくしたい！
             {
                 GameObject ins = _bombToPoint.SerchTag(this.gameObject, "Point");
-                Instantiate(BombPrefab, ins.transform.position, ins.transform.rotation);
-                _countBomb -= 1;
+                Point pointscript; //呼ぶスクリプトにあだなつける
+                pointscript = ins.GetComponent<Point>();　//付いているスクリプトを取得
+                if (pointscript.inBomb == true)
+                {
+                    Instantiate(BombPrefab, ins.transform.position, ins.transform.rotation);
+                    _countBomb -= 1;
+                    pointscript.inBomb = false;
+                }
             }
         }
 

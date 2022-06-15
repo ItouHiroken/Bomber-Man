@@ -15,7 +15,7 @@ public class BombPlayer2 : MonoBehaviour
     [Tooltip("これはオーディオソース")] private AudioSource booooooo;
     [Tooltip("爆弾のアニメーションを持ってくるよ！")] public AudioClip audioClip;
 
-    private bool _bombed;
+    [Tooltip("これはボムからプレイヤーまで正常に動かすためにいるやつ")]private bool _bombed;
     public void Start()
     {
         booooooo = gameObject.GetComponent<AudioSource>();
@@ -62,9 +62,9 @@ public class BombPlayer2 : MonoBehaviour
     }
     private IEnumerator CreateExplosions(Vector3 direction)
     {
-        PlayerControll playerscript; //呼ぶスクリプトにあだなつける
+        Player2Controll playerscript; //呼ぶスクリプトにあだなつける
         GameObject obj = GameObject.Find("Player2"); //Playerっていうオブジェクトを探す
-        playerscript = obj.GetComponent<PlayerControll>();　//付いているスクリプトを取得
+        playerscript = obj.GetComponent<Player2Controll>();　//付いているスクリプトを取得
         // 2 マス分ループする
         for (int i = 1; i < playerscript._bombRange; i++)
         {

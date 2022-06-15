@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 425413714971242218}
   - component: {fileID: 2250942208636193868}
   - component: {fileID: 1443660859508294462}
-  - component: {fileID: 4864680675890214583}
   - component: {fileID: -5407148464281534200}
   - component: {fileID: 1447584191507937654}
   - component: {fileID: 5607018177761344729}
@@ -109,30 +108,6 @@ MonoBehaviour:
   _bombHp: 1
   _circleCollider: {fileID: 5607018177761344729}
   _collide: {fileID: -5407148464281534200}
-  _bombRange: 9
-  explosionPrefab: {fileID: 2138906100856040723, guid: 01cba5963920b4b4db6dead9f1944e9b, type: 3}
-  levelMask:
-    serializedVersion: 2
-    m_Bits: 64
-  audioClip: {fileID: 8300000, guid: c7e572b255e311b479005985ed7f4ba2, type: 3}
---- !u!114 &4864680675890214583
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1135012796401298066}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c5a5f139019b0e46bd8da0f4ca5b203, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _targetTime: 3
-  _currentTime: 0
-  _bombHp: 1
-  _circleCollider: {fileID: 5607018177761344729}
-  _collide: {fileID: -5407148464281534200}
-  _bombRange: 9
   explosionPrefab: {fileID: 2138906100856040723, guid: 01cba5963920b4b4db6dead9f1944e9b, type: 3}
   levelMask:
     serializedVersion: 2

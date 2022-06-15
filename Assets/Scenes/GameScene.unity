@@ -249,6 +249,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wallHp: 1
+  itemPrefab:
+  - {fileID: 1938099388}
+  - {fileID: 1572209400}
+  - {fileID: 489070782}
+  - {fileID: 1648034284}
+  - {fileID: 1648034284}
 --- !u!50 &64038459
 Rigidbody2D:
   serializedVersion: 4
@@ -396,6 +402,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wallHp: 1
+  itemPrefab:
+  - {fileID: 1938099388}
+  - {fileID: 1572209400}
+  - {fileID: 489070782}
+  - {fileID: 1648034284}
+  - {fileID: 1648034284}
 --- !u!50 &87174502
 Rigidbody2D:
   serializedVersion: 4
@@ -693,6 +705,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wallHp: 1
+  itemPrefab:
+  - {fileID: 1938099388}
+  - {fileID: 1572209400}
+  - {fileID: 489070782}
+  - {fileID: 1648034284}
+  - {fileID: 1648034284}
 --- !u!50 &98129144
 Rigidbody2D:
   serializedVersion: 4
@@ -988,6 +1006,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wallHp: 1
+  itemPrefab:
+  - {fileID: 1938099388}
+  - {fileID: 1572209400}
+  - {fileID: 489070782}
+  - {fileID: 1648034284}
+  - {fileID: 1648034284}
 --- !u!50 &163303230
 Rigidbody2D:
   serializedVersion: 4
@@ -1192,6 +1216,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wallHp: 1
+  itemPrefab:
+  - {fileID: 1938099388}
+  - {fileID: 1572209400}
+  - {fileID: 489070782}
+  - {fileID: 1648034284}
+  - {fileID: 1648034284}
 --- !u!50 &215673824
 Rigidbody2D:
   serializedVersion: 4
@@ -1339,6 +1369,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wallHp: 1
+  itemPrefab:
+  - {fileID: 1938099388}
+  - {fileID: 1572209400}
+  - {fileID: 489070782}
+  - {fileID: 1648034284}
+  - {fileID: 1648034284}
 --- !u!50 &255013818
 Rigidbody2D:
   serializedVersion: 4
@@ -1486,6 +1522,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wallHp: 1
+  itemPrefab:
+  - {fileID: 1938099388}
+  - {fileID: 1572209400}
+  - {fileID: 489070782}
+  - {fileID: 1648034284}
+  - {fileID: 1648034284}
 --- !u!50 &278504384
 Rigidbody2D:
   serializedVersion: 4
@@ -1633,6 +1675,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wallHp: 1
+  itemPrefab:
+  - {fileID: 1938099388}
+  - {fileID: 1572209400}
+  - {fileID: 489070782}
+  - {fileID: 1648034284}
+  - {fileID: 1648034284}
 --- !u!50 &295900475
 Rigidbody2D:
   serializedVersion: 4
@@ -1780,6 +1828,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wallHp: 1
+  itemPrefab:
+  - {fileID: 1938099388}
+  - {fileID: 1572209400}
+  - {fileID: 489070782}
+  - {fileID: 1648034284}
+  - {fileID: 1648034284}
 --- !u!50 &301891592
 Rigidbody2D:
   serializedVersion: 4
@@ -2061,6 +2115,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wallHp: 1
+  itemPrefab:
+  - {fileID: 1938099388}
+  - {fileID: 1572209400}
+  - {fileID: 489070782}
+  - {fileID: 1648034284}
+  - {fileID: 1648034284}
 --- !u!50 &313684279
 Rigidbody2D:
   serializedVersion: 4
@@ -2284,6 +2344,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wallHp: 1
+  itemPrefab:
+  - {fileID: 1938099388}
+  - {fileID: 1572209400}
+  - {fileID: 489070782}
+  - {fileID: 1648034284}
+  - {fileID: 1648034284}
 --- !u!50 &334075618
 Rigidbody2D:
   serializedVersion: 4
@@ -2507,6 +2573,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wallHp: 1
+  itemPrefab:
+  - {fileID: 1938099388}
+  - {fileID: 1572209400}
+  - {fileID: 489070782}
+  - {fileID: 1648034284}
+  - {fileID: 1648034284}
 --- !u!50 &480412838
 Rigidbody2D:
   serializedVersion: 4
@@ -2657,7 +2729,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 489070782}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.68, y: 17.5, z: 0}
+  m_LocalPosition: {x: 11.34, y: 21.34, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3047,6 +3119,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wallHp: 1
+  itemPrefab:
+  - {fileID: 1938099388}
+  - {fileID: 1572209400}
+  - {fileID: 489070782}
+  - {fileID: 1648034284}
+  - {fileID: 1648034284}
 --- !u!50 &594962095
 Rigidbody2D:
   serializedVersion: 4
@@ -3194,6 +3272,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wallHp: 1
+  itemPrefab:
+  - {fileID: 1938099388}
+  - {fileID: 1572209400}
+  - {fileID: 489070782}
+  - {fileID: 1648034284}
+  - {fileID: 1648034284}
 --- !u!50 &621079181
 Rigidbody2D:
   serializedVersion: 4
@@ -3408,6 +3492,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wallHp: 1
+  itemPrefab:
+  - {fileID: 1938099388}
+  - {fileID: 1572209400}
+  - {fileID: 489070782}
+  - {fileID: 1648034284}
+  - {fileID: 1648034284}
 --- !u!50 &636721557
 Rigidbody2D:
   serializedVersion: 4
@@ -3555,6 +3645,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wallHp: 1
+  itemPrefab:
+  - {fileID: 1938099388}
+  - {fileID: 1572209400}
+  - {fileID: 489070782}
+  - {fileID: 1648034284}
+  - {fileID: 1648034284}
 --- !u!50 &640082743
 Rigidbody2D:
   serializedVersion: 4
@@ -3645,6 +3741,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wallHp: 1
+  itemPrefab:
+  - {fileID: 1938099388}
+  - {fileID: 1572209400}
+  - {fileID: 489070782}
+  - {fileID: 1648034284}
+  - {fileID: 1648034284}
 --- !u!61 &670846308
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3849,6 +3951,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wallHp: 1
+  itemPrefab:
+  - {fileID: 1938099388}
+  - {fileID: 1572209400}
+  - {fileID: 489070782}
+  - {fileID: 1648034284}
+  - {fileID: 1648034284}
 --- !u!50 &680430522
 Rigidbody2D:
   serializedVersion: 4
@@ -3996,6 +4104,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wallHp: 1
+  itemPrefab:
+  - {fileID: 1938099388}
+  - {fileID: 1572209400}
+  - {fileID: 489070782}
+  - {fileID: 1648034284}
+  - {fileID: 1648034284}
 --- !u!50 &694285382
 Rigidbody2D:
   serializedVersion: 4
@@ -4143,6 +4257,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wallHp: 1
+  itemPrefab:
+  - {fileID: 1938099388}
+  - {fileID: 1572209400}
+  - {fileID: 489070782}
+  - {fileID: 1648034284}
+  - {fileID: 1648034284}
 --- !u!50 &778490838
 Rigidbody2D:
   serializedVersion: 4
@@ -4290,6 +4410,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wallHp: 1
+  itemPrefab:
+  - {fileID: 1938099388}
+  - {fileID: 1572209400}
+  - {fileID: 489070782}
+  - {fileID: 1648034284}
+  - {fileID: 1648034284}
 --- !u!50 &781561044
 Rigidbody2D:
   serializedVersion: 4
@@ -4415,9 +4541,9 @@ MonoBehaviour:
   _bombToPoint: {fileID: 787694024}
   _playerHp: 1
   controller1: {fileID: 787694019}
-  _countBomb: 1
-  _speed: 10
-  _bombRange: 7
+  _countBomb: 5
+  _speed: 6
+  _bombRange: 6
   Result: {fileID: 1102682457}
   BombPrefab: {fileID: 1135012796401298066, guid: 77dfe64a62fcdf549b6f8105919a8602, type: 3}
 --- !u!50 &787694021
@@ -4615,6 +4741,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wallHp: 1
+  itemPrefab:
+  - {fileID: 1938099388}
+  - {fileID: 1572209400}
+  - {fileID: 489070782}
+  - {fileID: 1648034284}
+  - {fileID: 1648034284}
 --- !u!50 &810838065
 Rigidbody2D:
   serializedVersion: 4
@@ -5964,6 +6096,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wallHp: 1
+  itemPrefab:
+  - {fileID: 1938099388}
+  - {fileID: 1572209400}
+  - {fileID: 489070782}
+  - {fileID: 1648034284}
+  - {fileID: 1648034284}
 --- !u!50 &891349175
 Rigidbody2D:
   serializedVersion: 4
@@ -6072,7 +6210,7 @@ GameObject:
   - component: {fileID: 961806388}
   - component: {fileID: 961806389}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Kowarerukabe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6301,6 +6439,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wallHp: 1
+  itemPrefab:
+  - {fileID: 1938099388}
+  - {fileID: 1572209400}
+  - {fileID: 489070782}
+  - {fileID: 1648034284}
+  - {fileID: 1648034284}
 --- !u!50 &1010779073
 Rigidbody2D:
   serializedVersion: 4
@@ -6528,6 +6672,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wallHp: 1
+  itemPrefab:
+  - {fileID: 1938099388}
+  - {fileID: 1572209400}
+  - {fileID: 489070782}
+  - {fileID: 1648034284}
+  - {fileID: 1648034284}
 --- !u!50 &1059677935
 Rigidbody2D:
   serializedVersion: 4
@@ -6618,6 +6768,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wallHp: 1
+  itemPrefab:
+  - {fileID: 1938099388}
+  - {fileID: 1572209400}
+  - {fileID: 489070782}
+  - {fileID: 1648034284}
+  - {fileID: 1648034284}
 --- !u!61 &1089747061
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7097,6 +7253,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wallHp: 1
+  itemPrefab:
+  - {fileID: 1938099388}
+  - {fileID: 1572209400}
+  - {fileID: 489070782}
+  - {fileID: 1648034284}
+  - {fileID: 1648034284}
 --- !u!50 &1177997889
 Rigidbody2D:
   serializedVersion: 4
@@ -10653,6 +10815,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wallHp: 1
+  itemPrefab:
+  - {fileID: 1938099388}
+  - {fileID: 1572209400}
+  - {fileID: 489070782}
+  - {fileID: 1648034284}
+  - {fileID: 1648034284}
 --- !u!50 &1315864226
 Rigidbody2D:
   serializedVersion: 4
@@ -10882,6 +11050,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wallHp: 1
+  itemPrefab:
+  - {fileID: 1938099388}
+  - {fileID: 1572209400}
+  - {fileID: 489070782}
+  - {fileID: 1648034284}
+  - {fileID: 1648034284}
 --- !u!50 &1338909922
 Rigidbody2D:
   serializedVersion: 4
@@ -11015,7 +11189,7 @@ RectTransform:
   - {fileID: 1911749257}
   - {fileID: 1033589777}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -11148,6 +11322,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wallHp: 1
+  itemPrefab:
+  - {fileID: 1938099388}
+  - {fileID: 1572209400}
+  - {fileID: 489070782}
+  - {fileID: 1648034284}
+  - {fileID: 1648034284}
 --- !u!50 &1452970485
 Rigidbody2D:
   serializedVersion: 4
@@ -11399,6 +11579,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wallHp: 1
+  itemPrefab:
+  - {fileID: 1938099388}
+  - {fileID: 1572209400}
+  - {fileID: 489070782}
+  - {fileID: 1648034284}
+  - {fileID: 1648034284}
 --- !u!50 &1463614024
 Rigidbody2D:
   serializedVersion: 4
@@ -11546,6 +11732,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wallHp: 1
+  itemPrefab:
+  - {fileID: 1938099388}
+  - {fileID: 1572209400}
+  - {fileID: 489070782}
+  - {fileID: 1648034284}
+  - {fileID: 1648034284}
 --- !u!50 &1506036845
 Rigidbody2D:
   serializedVersion: 4
@@ -11693,6 +11885,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wallHp: 1
+  itemPrefab:
+  - {fileID: 1938099388}
+  - {fileID: 1572209400}
+  - {fileID: 489070782}
+  - {fileID: 1648034284}
+  - {fileID: 1648034284}
 --- !u!50 &1525279488
 Rigidbody2D:
   serializedVersion: 4
@@ -11840,6 +12038,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wallHp: 1
+  itemPrefab:
+  - {fileID: 1938099388}
+  - {fileID: 1572209400}
+  - {fileID: 489070782}
+  - {fileID: 1648034284}
+  - {fileID: 1648034284}
 --- !u!50 &1544958699
 Rigidbody2D:
   serializedVersion: 4
@@ -11987,6 +12191,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wallHp: 1
+  itemPrefab:
+  - {fileID: 1938099388}
+  - {fileID: 1572209400}
+  - {fileID: 489070782}
+  - {fileID: 1648034284}
+  - {fileID: 1648034284}
 --- !u!50 &1550104810
 Rigidbody2D:
   serializedVersion: 4
@@ -12134,6 +12344,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wallHp: 1
+  itemPrefab:
+  - {fileID: 1938099388}
+  - {fileID: 1572209400}
+  - {fileID: 489070782}
+  - {fileID: 1648034284}
+  - {fileID: 1648034284}
 --- !u!50 &1556226907
 Rigidbody2D:
   serializedVersion: 4
@@ -12169,7 +12385,7 @@ GameObject:
   - component: {fileID: 1572209402}
   - component: {fileID: 1572209401}
   m_Layer: 0
-  m_Name: AshiFuyasuMan
+  m_Name: AshiHayaiMan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12284,7 +12500,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1572209400}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.25, y: 15.23, z: 0}
+  m_LocalPosition: {x: 15.28, y: 21.64, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12417,6 +12633,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wallHp: 1
+  itemPrefab:
+  - {fileID: 1938099388}
+  - {fileID: 1572209400}
+  - {fileID: 489070782}
+  - {fileID: 1648034284}
+  - {fileID: 1648034284}
 --- !u!50 &1614968558
 Rigidbody2D:
   serializedVersion: 4
@@ -12564,6 +12786,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wallHp: 1
+  itemPrefab:
+  - {fileID: 1938099388}
+  - {fileID: 1572209400}
+  - {fileID: 489070782}
+  - {fileID: 1648034284}
+  - {fileID: 1648034284}
 --- !u!50 &1621707617
 Rigidbody2D:
   serializedVersion: 4
@@ -12585,6 +12813,37 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!1 &1648034284
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1648034285}
+  m_Layer: 0
+  m_Name: iranaiko
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1648034285
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648034284}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.828875, y: 15.091738, z: -0.029727241}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1648364917
 GameObject:
   m_ObjectHideFlags: 0
@@ -12711,6 +12970,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wallHp: 1
+  itemPrefab:
+  - {fileID: 1938099388}
+  - {fileID: 1572209400}
+  - {fileID: 489070782}
+  - {fileID: 1648034284}
+  - {fileID: 1648034284}
 --- !u!50 &1648364922
 Rigidbody2D:
   serializedVersion: 4
@@ -12858,6 +13123,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wallHp: 1
+  itemPrefab:
+  - {fileID: 1938099388}
+  - {fileID: 1572209400}
+  - {fileID: 489070782}
+  - {fileID: 1648034284}
+  - {fileID: 1648034284}
 --- !u!50 &1651543764
 Rigidbody2D:
   serializedVersion: 4
@@ -13167,6 +13438,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wallHp: 1
+  itemPrefab:
+  - {fileID: 1938099388}
+  - {fileID: 1572209400}
+  - {fileID: 489070782}
+  - {fileID: 1648034284}
+  - {fileID: 1648034284}
 --- !u!50 &1743818226
 Rigidbody2D:
   serializedVersion: 4
@@ -13298,7 +13575,7 @@ RectTransform:
   m_Children:
   - {fileID: 1824483124}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -13312,7 +13589,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1744728493}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 155a967fb41ef5249b015ed93bbdb586, type: 3}
   m_Name: 
@@ -13445,6 +13722,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wallHp: 1
+  itemPrefab:
+  - {fileID: 1938099388}
+  - {fileID: 1572209400}
+  - {fileID: 489070782}
+  - {fileID: 1648034284}
+  - {fileID: 1648034284}
 --- !u!50 &1748270365
 Rigidbody2D:
   serializedVersion: 4
@@ -13592,6 +13875,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wallHp: 1
+  itemPrefab:
+  - {fileID: 1938099388}
+  - {fileID: 1572209400}
+  - {fileID: 489070782}
+  - {fileID: 1648034284}
+  - {fileID: 1648034284}
 --- !u!50 &1765523023
 Rigidbody2D:
   serializedVersion: 4
@@ -13815,6 +14104,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wallHp: 1
+  itemPrefab:
+  - {fileID: 1938099388}
+  - {fileID: 1572209400}
+  - {fileID: 489070782}
+  - {fileID: 1648034284}
+  - {fileID: 1648034284}
 --- !u!50 &1781880310
 Rigidbody2D:
   serializedVersion: 4
@@ -13905,6 +14200,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wallHp: 1
+  itemPrefab:
+  - {fileID: 1938099388}
+  - {fileID: 1572209400}
+  - {fileID: 489070782}
+  - {fileID: 1648034284}
+  - {fileID: 1648034284}
 --- !u!61 &1790057871
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14109,6 +14410,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wallHp: 1
+  itemPrefab:
+  - {fileID: 1938099388}
+  - {fileID: 1572209400}
+  - {fileID: 489070782}
+  - {fileID: 1648034284}
+  - {fileID: 1648034284}
 --- !u!50 &1796430495
 Rigidbody2D:
   serializedVersion: 4
@@ -14283,6 +14590,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wallHp: 1
+  itemPrefab:
+  - {fileID: 1938099388}
+  - {fileID: 1572209400}
+  - {fileID: 489070782}
+  - {fileID: 1648034284}
+  - {fileID: 1648034284}
 --- !u!61 &1836592116
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14610,11 +14923,29 @@ MonoBehaviour:
   _bombToPoint: {fileID: 1864855913}
   _playerHp: 1
   controller2: {fileID: 1864855920}
-  _countBomb: 4
-  _speed: 10
-  _bombRange: 2
+  _countBomb: 5
+  _speed: 6
+  _bombRange: 6
   Result: {fileID: 1408217316}
   BombPrefab: {fileID: 1135012796401298066, guid: 74bf9161840b0e34790884269d85adc2, type: 3}
+--- !u!1 &1888325532 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 154147767896818094, guid: 87cfe32240eb73c4ea24d590b8ccc9ee, type: 3}
+  m_PrefabInstance: {fileID: 164583419}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1888325533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1888325532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fd067594431068439300781baf57e95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inBomb: 1
 --- !u!1 &1895562676
 GameObject:
   m_ObjectHideFlags: 0
@@ -14741,6 +15072,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wallHp: 1
+  itemPrefab:
+  - {fileID: 1938099388}
+  - {fileID: 1572209400}
+  - {fileID: 489070782}
+  - {fileID: 1648034284}
+  - {fileID: 1648034284}
 --- !u!50 &1895562681
 Rigidbody2D:
   serializedVersion: 4
@@ -15038,6 +15375,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wallHp: 1
+  itemPrefab:
+  - {fileID: 1938099388}
+  - {fileID: 1572209400}
+  - {fileID: 489070782}
+  - {fileID: 1648034284}
+  - {fileID: 1648034284}
 --- !u!50 &1919382895
 Rigidbody2D:
   serializedVersion: 4
@@ -15185,6 +15528,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wallHp: 1
+  itemPrefab:
+  - {fileID: 1938099388}
+  - {fileID: 1572209400}
+  - {fileID: 489070782}
+  - {fileID: 1648034284}
+  - {fileID: 1648034284}
 --- !u!50 &1927882384
 Rigidbody2D:
   serializedVersion: 4
@@ -15220,7 +15569,7 @@ GameObject:
   - component: {fileID: 1938099392}
   - component: {fileID: 1938099393}
   m_Layer: 0
-  m_Name: BombFuyasuMan
+  m_Name: BombIppaiOkuMan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15298,7 +15647,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1938099388}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.48, y: 17.58, z: 0}
+  m_LocalPosition: {x: 22.72, y: 21.61, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15590,6 +15939,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wallHp: 1
+  itemPrefab:
+  - {fileID: 1938099388}
+  - {fileID: 1572209400}
+  - {fileID: 489070782}
+  - {fileID: 1648034284}
+  - {fileID: 1648034284}
 --- !u!50 &1992163018
 Rigidbody2D:
   serializedVersion: 4
@@ -15768,6 +16123,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wallHp: 1
+  itemPrefab:
+  - {fileID: 1938099388}
+  - {fileID: 1572209400}
+  - {fileID: 489070782}
+  - {fileID: 1648034284}
+  - {fileID: 1648034284}
 --- !u!50 &2059209662
 Rigidbody2D:
   serializedVersion: 4
@@ -16075,6 +16436,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wallHp: 1
+  itemPrefab:
+  - {fileID: 1938099388}
+  - {fileID: 1572209400}
+  - {fileID: 489070782}
+  - {fileID: 1648034284}
+  - {fileID: 1648034284}
 --- !u!50 &2089643859
 Rigidbody2D:
   serializedVersion: 4
@@ -16222,6 +16589,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wallHp: 1
+  itemPrefab:
+  - {fileID: 1938099388}
+  - {fileID: 1572209400}
+  - {fileID: 489070782}
+  - {fileID: 1648034284}
+  - {fileID: 1648034284}
 --- !u!50 &2128304581
 Rigidbody2D:
   serializedVersion: 4
@@ -16369,6 +16742,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wallHp: 1
+  itemPrefab:
+  - {fileID: 1938099388}
+  - {fileID: 1572209400}
+  - {fileID: 489070782}
+  - {fileID: 1648034284}
+  - {fileID: 1648034284}
 --- !u!50 &2131767690
 Rigidbody2D:
   serializedVersion: 4
@@ -16516,6 +16895,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wallHp: 1
+  itemPrefab:
+  - {fileID: 1938099388}
+  - {fileID: 1572209400}
+  - {fileID: 489070782}
+  - {fileID: 1648034284}
+  - {fileID: 1648034284}
 --- !u!50 &2136931650
 Rigidbody2D:
   serializedVersion: 4
