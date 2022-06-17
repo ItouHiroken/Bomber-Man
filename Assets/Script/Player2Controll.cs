@@ -9,10 +9,13 @@ public class Player2Controll : MonoBehaviour
     
     [SerializeField][Tooltip("ボムが行ってほしい場所サーチ用")] private BombToPoint _bombToPoint;
     [SerializeField][Tooltip("プレイヤーの体力")] float _playerHp = default;
-    [SerializeField][Tooltip("自分のonoffするため")] Player2Controll controller2;
+    [SerializeField][Tooltip("もうひとりの動きonoffするため")] PlayerControll controller1;
+    [SerializeField][Tooltip("自分の動きonoffするため")] Player2Controll controller2;
+
     [Tooltip("ボムの最大数カウント")] public int _countBomb = 1;
     [Tooltip("移動速度")] public float _speed = 10.0f;
     [Tooltip("爆弾の爆発範囲")] public int _bombRange = default;
+
 
     public GameObject Result;
     private Animator _anim;
@@ -37,7 +40,7 @@ public class Player2Controll : MonoBehaviour
 
         if (_countBomb >= 1)
         {
-            if (Input.GetKeyDown(KeyCode.Return))//死んだとき受けつけなくしたい！
+            if (Input.GetKeyDown(KeyCode.Return))
             {
                 GameObject ins = _bombToPoint.SerchTag(this.gameObject, "Point");
                 Point pointscript; //呼ぶスクリプトにあだなつける
@@ -76,12 +79,6 @@ public class Player2Controll : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.RightArrow))
         {
             _anim.SetFloat("horizonfloat", 0);
-
-
-            //    //_anim.SetFloat("walkfloat", Input.GetAxisRaw("Vertical"));
-            //    //_anim.SetFloat("horizonfloat", Input.GetAxisRaw("Horizontal"));
-            //}
-
         }
     }
     void OnTriggerEnter2D(Collider2D collision)
@@ -89,10 +86,12 @@ public class Player2Controll : MonoBehaviour
         if (collision.gameObject.TryGetComponent(out BombBlast bomb))
         {
             _playerHp -= bomb._bombDamage;
-            if (_playerHp <= 0)
+            if (_playerHp <= 0 && !controller1.IsDead)
             {
+                controller1.IsDead = true;
                 _anim.SetBool("alive", false);
-                controller2.enabled = false;
+                //controller1.enabled = false;
+                //controller2.enabled = false;
                 Destroy(gameObject, 1.15f);
                 Result.SetActive(true);
             }

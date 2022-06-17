@@ -17,7 +17,6 @@ public class Burst : MonoBehaviour
             if (playername == "Player2")
             {
                 BurstIncrease2();
-
             }
         }
     }
