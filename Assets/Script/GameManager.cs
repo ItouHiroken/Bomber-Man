@@ -40,10 +40,5 @@ public class GameManager : MonoBehaviour
             GameObject newRunningMan = Instantiate(runningmanPrefab);
             newRunningMan.name = runningmanPrefab.name;
         }
-        //if(player1Obj==null || player2Obj==null)
-        //{
-        //    SceneManager.LoadScene("GameStart");
-        //    Debug.Log("�Ă΂ꂽ");
-        //}
     }
 }

@@ -72,7 +72,7 @@ public class Bomb : MonoBehaviour
     }
     private IEnumerator CreateExplosions(Vector3 direction)
     {
-       
+        Debug.Log(playerscript._bombRange);
 
         // 2 マス分ループする
         for (int i = 1; i < playerscript._bombRange; i++)

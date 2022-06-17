@@ -9,10 +9,14 @@ public class PlayerControll : MonoBehaviour
 
     [SerializeField][Tooltip("ボムが行ってほしい場所サーチ用")] private BombToPoint _bombToPoint;
     [SerializeField][Tooltip("プレイヤーの体力")] float _playerHp = default;
-    [SerializeField][Tooltip("自分のonoffするため")] PlayerControll controller1;
-    [Tooltip("ボムの最大数カウント")] public int _countBomb =1 ; 
+    [SerializeField][Tooltip("自分の動きonoffするため")] PlayerControll controller1;
+    [SerializeField][Tooltip("もうひとりの動きonoffするため")] Player2Controll controller2;
+    [Tooltip("ボムの最大数カウント")] public int _countBomb = 1;
     [Tooltip("移動速度")] public float _speed = 10.0f;
     [Tooltip("爆弾の爆発範囲")] public int _bombRange = default;
+
+    //自身が死んだかどうか
+    [HideInInspector]public bool IsDead = false;
 
 
     public GameObject Result;
@@ -38,7 +42,7 @@ public class PlayerControll : MonoBehaviour
 
         if (_countBomb >= 1)
         {
-            if (Input.GetKeyDown(KeyCode.Space))//死んだとき受けつけなくしたい！
+            if (Input.GetKeyDown(KeyCode.Space))
             {
                 GameObject ins = _bombToPoint.SerchTag(this.gameObject, "Point");
                 Point pointscript; //呼ぶスクリプトにあだなつける
@@ -84,10 +88,12 @@ public class PlayerControll : MonoBehaviour
         if (collision.gameObject.TryGetComponent(out BombBlast bomb))
         {
             _playerHp -= bomb._bombDamage;
-            if (_playerHp <= 0)
+            if (_playerHp <= 0 && !IsDead)
             {
+                IsDead = true;
                 _anim.SetBool("alive", false);
                 controller1.enabled = false;
+                controller2.enabled = false;
                 Destroy(gameObject, 1.15f);
                 Result.SetActive(true);
             }
