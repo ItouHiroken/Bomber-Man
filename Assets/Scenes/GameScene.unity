@@ -850,7 +850,7 @@ MonoBehaviour:
   _squareY: 9
   pointPrefab: {fileID: 154147767896818094, guid: 87cfe32240eb73c4ea24d590b8ccc9ee, type: 3}
   _pointX: 2.5
-  _pointY: 9.5
+  _pointY: 8.9
 --- !u!4 &141347859
 Transform:
   m_ObjectHideFlags: 0
@@ -4907,59 +4907,7 @@ MonoBehaviour:
   - {fileID: 489070782}
   - {fileID: 1572209400}
   - {fileID: 1938099388}
-  pointPrefab:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  pointPrefab: []
 --- !u!1 &824876150
 GameObject:
   m_ObjectHideFlags: 0
