@@ -11,7 +11,7 @@ public class BombPlayer2 : MonoBehaviour
     [SerializeField][Tooltip("isTriggerのチェックがついてないやーつ")] private CircleCollider2D _circleCollider = default;
     [Tooltip("isTriggerのチェックがついてるやーつ")] public Collider2D _collide = default;
     [Tooltip("爆発のエフェクトを持ってくるよ！")] public GameObject explosionPrefab;
-    [Tooltip("違うレイヤーで当たり判定とるよ！")] public LayerMask levelMask;
+    [SerializeField][Tooltip("違うレイヤーで当たり判定とるよ！")] public LayerMask levelMask;
     [Tooltip("これはオーディオソース")] private AudioSource booooooo;
     [Tooltip("爆弾のアニメーションを持ってくるよ！")] public AudioClip audioClip;
     Player2Controll playerscript; //呼ぶスクリプトにあだなつける

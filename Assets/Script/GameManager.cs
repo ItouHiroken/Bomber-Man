@@ -14,24 +14,24 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] GameObject runningmanPrefab;
 
-    [SerializeField] int _squareX = 19;//盤上のx(横)座標
-    [SerializeField] int _squareY = 9;//盤上のz(縦)座標
-    [SerializeField] private GameObject pointPrefab;
-    [SerializeField] float _pointX;
-    [SerializeField] float _pointY;
-    void Start()
-    {
-        for (int i = 1; i < _squareY; i++)
-        {
-            for (int j = 1; j < _squareX; j++)
-            {
-                //GameObject obj = GameObject.Find("Point");
-                //GameObject newObj = Instantiate(Point);
-                Instantiate(pointPrefab);
-                pointPrefab.transform.position = new Vector2(j + _pointX, i + _pointY);
-            }
-        }
-    }
+    //[SerializeField] int _squareX = 19;//盤上のx(横)座標
+    //[SerializeField] int _squareY = 9;//盤上のz(縦)座標
+    //[SerializeField] private GameObject pointPrefab;
+    //[SerializeField] float _pointX;
+    //[SerializeField] float _pointY;
+    //void Start()
+    //{
+    //    for (int i = 1; i < _squareY; i++)
+    //    {
+    //        for (int j = 1; j < _squareX; j++)
+    //        {
+    //            //GameObject obj = GameObject.Find("Point");
+    //            //GameObject newObj = Instantiate(Point);
+    //            Instantiate(pointPrefab);
+    //            pointPrefab.transform.position = new Vector2(j + _pointX, i + _pointY);
+    //        }
+    //    }
+    //}
 
     public void Update()
     {

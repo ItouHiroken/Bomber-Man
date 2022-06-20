@@ -45,11 +45,11 @@ public class Player2Controll : MonoBehaviour
                 GameObject ins = _bombToPoint.SerchTag(this.gameObject, "Point");
                 Point pointscript; //呼ぶスクリプトにあだなつける
                 pointscript = ins.GetComponent<Point>();　//付いているスクリプトを取得
-                if (pointscript.inBomb == true)
+                if (pointscript.inBomb == false)
                 {
                     Instantiate(BombPrefab, ins.transform.position, ins.transform.rotation);
                     _countBomb -= 1;
-                    pointscript.inBomb = false;
+                    pointscript.inBomb = true;
                 }
             }
         }
@@ -90,8 +90,8 @@ public class Player2Controll : MonoBehaviour
             {
                 controller1.IsDead = true;
                 _anim.SetBool("alive", false);
-                //controller1.enabled = false;
-                //controller2.enabled = false;
+                controller1.enabled = false;
+                controller2.enabled = false;
                 Destroy(gameObject, 1.15f);
                 Result.SetActive(true);
             }

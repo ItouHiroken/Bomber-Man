@@ -14,9 +14,11 @@ public class BrokenWall : MonoBehaviour
         {
             _wallHp -= bomb._bombDamage;
             if (_wallHp <= 0)
-            { 
-                SpawnRandomItem();
-                Destroy(gameObject);
+            {
+                Invoke(nameof(SpawnRandomItem),0.3f);
+                Destroy(gameObject,0.4f);
+                
+
             }
         }
     }
