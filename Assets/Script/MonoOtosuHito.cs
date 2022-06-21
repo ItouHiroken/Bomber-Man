@@ -21,12 +21,17 @@ public class MonoOtosuHito : MonoBehaviour
     private int choiceNum;
     bool _isAdd = false;
 
+    [Tooltip("これはオーディオソース")] private AudioSource booooooo;
+    [SerializeField] [Tooltip("これはオーディオクリップ")] private AudioClip audioClip;
+
     [SerializeField][Tooltip("移動速度")] float _speed = -2.0f;
     //  [Tooltip("空のアニメーターの置き場")] private Animator anim;
     [Tooltip("右の端の場所")] private Transform _Xposition;
 
     void Start()
     {
+
+        booooooo = gameObject.GetComponent<AudioSource>();
         _Xposition = GetComponent<Transform>();
     }
     private void Update()
@@ -90,13 +95,11 @@ public class MonoOtosuHito : MonoBehaviour
                 Debug.DrawRay(transform.position + new Vector3(0, 0.5f, 0) + direction * i, direction);
 
                 int _random = Random.Range(0, itemList.Count);
-                // 爆風を広げた先に何も存在しない場合
                 if (!hit.collider)
                 {
 
-
                 }
-                // 爆風を広げた先にブロックが存在する場合
+                // レイのにブロックが存在する場合
                 else
                 {
                     hit.collider.gameObject.layer = LayerMask.NameToLayer("Mejirushi");    //←←←←←←←←←←当たったポイントのレイヤーかえれない！の聞く
@@ -104,8 +107,10 @@ public class MonoOtosuHito : MonoBehaviour
                     (
                         itemList[Random.Range(0, _random)],
                         transform.position + (i * direction),
-                        itemList[0].transform.rotation
+                        itemList[Random.Range(0, _random)].transform.rotation
                     );
+                    Debug.Log("音出すよ");
+                    booooooo.PlayOneShot(audioClip);
                 }
 
                 // 0.05 秒待ってから、次のマスに爆風を広げる
