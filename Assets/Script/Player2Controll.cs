@@ -19,18 +19,20 @@ public class Player2Controll : MonoBehaviour
 
     public GameObject Result;
     private Animator _anim;
+    private Rigidbody2D rb;
 
     public GameObject BombPrefab;
     private void Start()
     {
         _anim = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
         Result.SetActive(false);
     }
     void Update()
     {
         float verticalInput = _speed * Input.GetAxisRaw("Player2 Vertical");
         float horizontalInput = _speed * Input.GetAxisRaw("Player2 Horizontal");
-        GetComponent<Rigidbody2D>().velocity = new Vector2(horizontalInput, verticalInput);
+        rb.velocity = new Vector2(horizontalInput, verticalInput);
         Vector2 _playerPosition = GameObject.Find("Player2").transform.position;
 
         float bombx = _playerPosition.x;
