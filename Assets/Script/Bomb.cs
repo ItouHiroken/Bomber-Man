@@ -12,7 +12,7 @@ public class Bomb : MonoBehaviour
     [Tooltip("isTriggerのチェックがついてるやーつ")] public Collider2D _collide = default;
 
     [Tooltip("爆発のエフェクトを持ってくるよ！")] public GameObject explosionPrefab;
-    [Tooltip("違うレイヤーで当たり判定とるよ！")] public LayerMask levelMask;
+    [SerializeField][Tooltip("違うレイヤーで当たり判定とるよ！")] private LayerMask levelMask;
     [Tooltip("これはオーディオソース")]private AudioSource booooooo;
     [Tooltip("爆弾のアニメーションを持ってくるよ！")]public AudioClip audioClip;
     PlayerControll playerscript; //呼ぶスクリプトにあだなつける
@@ -72,7 +72,6 @@ public class Bomb : MonoBehaviour
     }
     private IEnumerator CreateExplosions(Vector3 direction)
     {
-        Debug.Log(playerscript._bombRange);
 
         // 2 マス分ループする
         for (int i = 1; i < playerscript._bombRange; i++)
