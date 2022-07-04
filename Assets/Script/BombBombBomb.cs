@@ -2,37 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BombBombBomb : MonoBehaviour
+public class BombBombBomb : ItemBase
 {
-    private string playername;
-    [SerializeField] int _Hp = 1;
-
-    void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            playername = collision.gameObject.name;
-            if (playername =="Player" ) 
-            {
-                BombIncrease();
-            }
-            if (playername == "Player2") 
-            {
-                BombIncrease2();
-
-            }
-        }
-        if (collision.gameObject.TryGetComponent(out BombBlast bomb))
-        {
-            _Hp -= bomb._bombDamage;
-            if (_Hp <= 0)
-            {
-                LostItemIncrease();
-                Destroy(gameObject);
-            }
-        }
-    }
-    void BombIncrease()
+    public override void Activate1()
     {
         PlayerControll playerscript; //呼ぶスクリプトにあだなつける
         GameObject obj = GameObject.Find("Player"); //Playerっていうオブジェクトを探す
@@ -40,20 +12,12 @@ public class BombBombBomb : MonoBehaviour
         playerscript._countBomb += 1;
         Destroy(gameObject);
     }
-    void BombIncrease2()
+    public override void Activate2()
     {
         Player2Controll playerscript; //呼ぶスクリプトにあだなつける
         GameObject obj = GameObject.Find("Player2"); //Playerっていうオブジェクトを探す
         playerscript = obj.GetComponent<Player2Controll>();　//付いているスクリプトを取得
         playerscript._countBomb += 1;
-        Destroy(gameObject);
-    }
-    void LostItemIncrease()
-    {
-        MonoOtosuHito script; //呼ぶスクリプトにあだなつける
-        GameObject obj = GameObject.Find("Sorakarabusshi"); //Playerっていうオブジェクトを探す
-        script = obj.GetComponent<MonoOtosuHito>(); //付いているスクリプトを取得
-        script._lostItem += 1;
         Destroy(gameObject);
     }
 }
