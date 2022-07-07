@@ -20,9 +20,11 @@ ESCを押すことでゲームを閉じることができる。
 # 使用したアセットストア
 
 キャラクター 
+
 2D Character - Astronaut
 
 効果音 BGM
+
 Fruit Falling SFX Pack 1
 
 A Symphony of Disarray - Game Music Pack
