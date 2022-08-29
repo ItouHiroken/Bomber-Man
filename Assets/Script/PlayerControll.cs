@@ -2,12 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Linq;
 
 
 public class PlayerControll : MonoBehaviour
 {
-
-    [SerializeField][Tooltip("ボムが行ってほしい場所サーチ用")] private BombToPoint _bombToPoint;
     [SerializeField][Tooltip("プレイヤーの体力")] float _playerHp = default;
     [SerializeField][Tooltip("自分の動きonoffするため")] PlayerControll controller1;
     [SerializeField][Tooltip("もうひとりの動きonoffするため")] Player2Controll controller2;
@@ -16,7 +15,7 @@ public class PlayerControll : MonoBehaviour
     [Tooltip("爆弾の爆発範囲")] public int _bombRange = default;
 
     //自身が死んだかどうか
-    [HideInInspector]public bool IsDead = false;
+    [HideInInspector] public bool IsDead = false;
 
 
     public GameObject Result;
@@ -24,8 +23,12 @@ public class PlayerControll : MonoBehaviour
     private Rigidbody2D rb;
 
     public GameObject BombPrefab;
+
+    GameObject[] _points = default;
+    GameObject Point;
     private void Start()
     {
+        _points = GameObject.FindGameObjectsWithTag("Point");
         _anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         Result.SetActive(false);
@@ -46,12 +49,14 @@ public class PlayerControll : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                GameObject ins = _bombToPoint.SerchTag(this.gameObject, "Point");
+                Point = _points.OrderBy(x =>
+                Vector2.Distance(gameObject.transform.position, x.transform.position)
+                ).FirstOrDefault();
                 Point pointscript; //呼ぶスクリプトにあだなつける
-                pointscript = ins.GetComponent<Point>();　//付いているスクリプトを取得
-                if(pointscript.inBomb==false)
+                pointscript = Point.GetComponent<Point>();　//付いているスクリプトを取得
+                if (pointscript.inBomb == false)
                 {
-                    Instantiate(BombPrefab, ins.transform.position, ins.transform.rotation);
+                    Instantiate(BombPrefab, Point.transform.position, Point.transform.rotation);
                     _countBomb -= 1;
                     pointscript.inBomb = true;
                 }

@@ -2,12 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Linq;
 
 
 public class Player2Controll : MonoBehaviour
 {
-    
-    [SerializeField][Tooltip("ボムが行ってほしい場所サーチ用")] private BombToPoint _bombToPoint;
     [SerializeField][Tooltip("プレイヤーの体力")] float _playerHp = default;
     [SerializeField][Tooltip("もうひとりの動きonoffするため")] PlayerControll controller1;
     [SerializeField][Tooltip("自分の動きonoffするため")] Player2Controll controller2;
@@ -22,8 +21,12 @@ public class Player2Controll : MonoBehaviour
     private Rigidbody2D rb;
 
     public GameObject BombPrefab;
+    
+    GameObject[] _points = default;
+    GameObject Point;
     private void Start()
     {
+        _points = GameObject.FindGameObjectsWithTag("Point");
         _anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         Result.SetActive(false);
@@ -44,12 +47,14 @@ public class Player2Controll : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Return))
             {
-                GameObject ins = _bombToPoint.SerchTag(this.gameObject, "Point");
+                Point = _points.OrderBy(x =>
+                Vector2.Distance(gameObject.transform.position, x.transform.position)
+                ).FirstOrDefault();
                 Point pointscript; //呼ぶスクリプトにあだなつける
-                pointscript = ins.GetComponent<Point>();　//付いているスクリプトを取得
+                pointscript = Point.GetComponent<Point>();　//付いているスクリプトを取得
                 if (pointscript.inBomb == false)
                 {
-                    Instantiate(BombPrefab, ins.transform.position, ins.transform.rotation);
+                    Instantiate(BombPrefab, Point.transform.position, Point.transform.rotation);
                     _countBomb -= 1;
                     pointscript.inBomb = true;
                 }
